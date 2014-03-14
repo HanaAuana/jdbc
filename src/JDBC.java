@@ -21,7 +21,7 @@ public class JDBC {
 					ResultSet rs=null;
 					try {
 						stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,   ResultSet.CONCUR_UPDATABLE);
-						rs = stmt.executeQuery("select *  from PERSON, ASSIGNMENT where SId = "+thisPerson+" and SId = StudentId");
+						rs = stmt.executeQuery("select *  from ASSIGNMENT where StudentId = "+thisPerson+"");
 						System.out.println("Query successful");
 						
 //						while (rs.next())
